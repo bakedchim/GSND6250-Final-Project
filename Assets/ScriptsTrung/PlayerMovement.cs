@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
-using TMPro;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -38,7 +37,10 @@ public class PlayerMovement : MonoBehaviour
 
     public GameControllerTrung gameControllerTrung;
 
-    public TMP_Text prompt;
+    public string interctableObjectTag = "";
+
+    [SerializeField]
+    private ObjectiveController objectiveController;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +56,11 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
+
+        if (interctableObjectTag != "" && Input.GetKeyDown(KeyCode.E)) {
+            objectiveController.StartInteraction(interctableObjectTag);
+        }
+
         // Rotate the player with the camera
         transform.rotation = Quaternion.Euler(0.0f, playerCam.transform.eulerAngles.y, 0.0f);
         // ground check
@@ -99,7 +106,9 @@ public class PlayerMovement : MonoBehaviour
     private void MovePlayer()
     {
         moveDirection = playerCam.transform.forward * verticalInput + playerCam.transform.right * horizontalInput;
-        
+        moveDirection.y = 0.0f;
+        // Debug.Log(moveDirection);
+
         if(grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
         else if(!grounded)
@@ -128,4 +137,6 @@ public class PlayerMovement : MonoBehaviour
     {
         readyToJump = true;
     }
+
+    
 }

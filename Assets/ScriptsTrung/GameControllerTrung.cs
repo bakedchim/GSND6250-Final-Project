@@ -12,6 +12,8 @@ public class GameControllerTrung : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         // Hide the game over canvas
         gameOverCanvas.SetActive(false);
         // Hide the game win canvas
