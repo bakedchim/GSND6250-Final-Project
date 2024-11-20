@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Quest1Give
   m_EditorClassIdentifier: 
   isLeft: 1
-  text: Please clean up all the cow dung in the animal field
+  text: Please clean up all the rocks in the animal field. I'm worried it might hurt
+    the cow's feet
   isSelfDialogue: 0

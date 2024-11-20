@@ -6,9 +6,12 @@ using TMPro;
 public class DialogController : MonoBehaviour
 {
     public Dialog[] ponderPreQuest;
+    public Dialog[] ponderNPCBeforeFinalQuest;
     public Dialog[] ponderBeforeFinalQuest;
 
     public Dialog[] quest1Give;
+    public Dialog[] quest2Give;
+    public Dialog[] quest3Give;
 
     public GameObject dialogPanel;
 
