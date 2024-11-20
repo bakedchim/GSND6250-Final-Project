@@ -739,6 +739,8 @@ MonoBehaviour:
   objective3Complete: 0
   hasReturnObjective3: 0
   dialogController: {fileID: 817435218}
+  playerMovement: {fileID: 1946194367}
+  interactText: {fileID: 2285936999440377417}
 --- !u!114 &817435218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,6 +756,8 @@ MonoBehaviour:
   ponderPreQuest:
   - {fileID: 11400000, guid: fc70d60a1c3a214489ed76e3df54eec7, type: 2}
   ponderBeforeFinalQuest: []
+  quest1Give:
+  - {fileID: 11400000, guid: 84ef1b3f7ca1deb408a7fd6a767502a2, type: 2}
   dialogPanel: {fileID: 2814913851995914784}
   dialogText: {fileID: 4772620965244017302}
   playerController: {fileID: 1946194367}
@@ -2337,7 +2341,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 817435218}
         m_TargetAssemblyTypeName: DialogController, Assembly-CSharp
         m_MethodName: AdvanceDialog
         m_Mode: 1

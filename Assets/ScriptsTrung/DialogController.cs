@@ -7,6 +7,9 @@ public class DialogController : MonoBehaviour
 {
     public Dialog[] ponderPreQuest;
     public Dialog[] ponderBeforeFinalQuest;
+
+    public Dialog[] quest1Give;
+
     public GameObject dialogPanel;
 
     [SerializeField]
@@ -21,17 +24,7 @@ public class DialogController : MonoBehaviour
     public void AdvanceDialog()
     {
         if (currentDialogIndex == currentDialogs.Length - 1) {
-            // if (CompareDialogs(currentDialogs, greetingsAndQuestion1)) {
-            //     if (objectiveController.objective1Complete) {
-            //         SetCurrentDialogs(question2);
-            //         objectiveController.hasReturnObjective1 = true;
-            //     } else {
-            //         SetCurrentDialogs(ponder);
-            //     }
-            // } else {
-            //     EndDialog();
-            // }
-            // return;
+            EndDialog();
         }
 
         currentDialogIndex++;
