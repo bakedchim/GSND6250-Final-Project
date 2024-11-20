@@ -681,6 +681,7 @@ GameObject:
   - component: {fileID: 817435216}
   - component: {fileID: 817435215}
   - component: {fileID: 817435217}
+  - component: {fileID: 817435218}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -737,6 +738,25 @@ MonoBehaviour:
   hasReturnObjective2: 0
   objective3Complete: 0
   hasReturnObjective3: 0
+  dialogController: {fileID: 817435218}
+--- !u!114 &817435218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817435214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4b69fd5371ec849a6e852d7a8d03e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ponderPreQuest:
+  - {fileID: 11400000, guid: fc70d60a1c3a214489ed76e3df54eec7, type: 2}
+  ponderBeforeFinalQuest: []
+  dialogPanel: {fileID: 2814913851995914784}
+  dialogText: {fileID: 4772620965244017302}
+  playerController: {fileID: 1946194367}
 --- !u!1 &1120379206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1881,7 +1901,7 @@ MonoBehaviour:
   playerCam: {fileID: 327365571}
   canMove: 1
   gameControllerTrung: {fileID: 817435215}
-  interctableObjectTag: 
+  interctableObject: {fileID: 0}
   objectiveController: {fileID: 817435217}
 --- !u!54 &1946194368
 Rigidbody:

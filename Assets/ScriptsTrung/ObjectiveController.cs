@@ -12,9 +12,14 @@ public class ObjectiveController : MonoBehaviour
     public bool objective3Complete = false;
     public bool hasReturnObjective3 = false;
 
-    public void StartInteraction(string tag) {
-        if (tag == "NPC") {
-            
+    [SerializeField]
+    private DialogController dialogController;
+
+    public void StartInteraction(GameObject interactableObject) {
+        if (interactableObject.CompareTag("CowDung")) {
+            if (hasGivenObjective1 == false) {
+                dialogController.SetCurrentDialogs(dialogController.ponderPreQuest);
+            }
         }
     }
 }

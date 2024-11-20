@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     public GameControllerTrung gameControllerTrung;
 
-    public string interctableObjectTag = "";
+    public GameObject interctableObject;
 
     [SerializeField]
     private ObjectiveController objectiveController;
@@ -57,8 +57,8 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        if (interctableObjectTag != "" && Input.GetKeyDown(KeyCode.E)) {
-            objectiveController.StartInteraction(interctableObjectTag);
+        if (interctableObject != null && Input.GetKeyDown(KeyCode.E)) {
+            objectiveController.StartInteraction(interctableObject);
         }
 
         // Rotate the player with the camera

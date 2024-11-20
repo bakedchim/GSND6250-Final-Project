@@ -5,11 +5,9 @@ using TMPro;
 
 public class DialogController : MonoBehaviour
 {
-    [SerializeField]
-    private Dialog[] ponder;
-   
-    [SerializeField]
-    private GameObject dialogPanel;
+    public Dialog[] ponderPreQuest;
+    public Dialog[] ponderBeforeFinalQuest;
+    public GameObject dialogPanel;
 
     [SerializeField]
     private TMP_Text dialogText;
@@ -18,21 +16,7 @@ public class DialogController : MonoBehaviour
     private int currentDialogIndex = 0;
 
     [SerializeField]
-    private ObjectiveController objectiveController;
-
-    [SerializeField]
-    private GameControllerTrung gameController;
-
-    [SerializeField]
     private PlayerMovement playerController;
-
-    public void StartInteraction(string tag)
-    {
-        playerController.canMove = false;
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-        SetCurrentDialogs(ponder);
-    }
 
     public void AdvanceDialog()
     {
@@ -71,6 +55,9 @@ public class DialogController : MonoBehaviour
 
     public void SetCurrentDialogs(Dialog[] dialogs)
     {
+        playerController.canMove = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         currentDialogs = dialogs;
         currentDialogIndex = 0;
         SetDialog(currentDialogs[0]);

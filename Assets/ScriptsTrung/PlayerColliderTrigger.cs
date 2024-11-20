@@ -19,21 +19,21 @@ public class PlayerColliderTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         // Check the layer of the object that the player is colliding with
         if (other.gameObject.layer == LayerMask.NameToLayer("Interactable")) {
-            playerMovement.interctableObjectTag = other.tag;
+            playerMovement.interctableObject = other.gameObject;
             interactText.gameObject.SetActive(true);
         }   
     }
 
     private void OnTriggerStay(Collider other) {
         if (other.gameObject.layer == LayerMask.NameToLayer("Interactable")) {
-            playerMovement.interctableObjectTag = other.tag;
+            playerMovement.interctableObject = other.gameObject;
             interactText.gameObject.SetActive(true);
         }
     }
 
     private void OnTriggerExit(Collider other) {
         if (other.gameObject.layer == LayerMask.NameToLayer("Interactable")) {
-            playerMovement.interctableObjectTag = "";
+            playerMovement.interctableObject = null;
             interactText.gameObject.SetActive(false);
         }
     }
