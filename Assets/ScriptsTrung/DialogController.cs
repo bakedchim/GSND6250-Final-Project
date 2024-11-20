@@ -28,6 +28,7 @@ public class DialogController : MonoBehaviour
     {
         if (currentDialogIndex == currentDialogs.Length - 1) {
             EndDialog();
+            return;
         }
 
         currentDialogIndex++;
