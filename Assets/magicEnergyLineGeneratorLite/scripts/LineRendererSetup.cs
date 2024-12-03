@@ -11,6 +11,7 @@ namespace soulercoasterLite.scripts {
                 return;
             }
 
+            #if UNITY_EDITOR
             string[] guids2 = AssetDatabase.FindAssets("defaultLineMaterial t:material");
             if (guids2.Length == 0) {
                 return;
@@ -18,6 +19,7 @@ namespace soulercoasterLite.scripts {
 
             monoBehaviour.GetComponent<LineRenderer>().sharedMaterial =
                 AssetDatabase.LoadAssetAtPath<Material>(AssetDatabase.GUIDToAssetPath(guids2[0]));
+            #endif   
             monoBehaviour.GetComponent<LineRenderer>().useWorldSpace = false;
         }
     }
