@@ -7,6 +7,8 @@ public class GameControllerTrung : MonoBehaviour
     public GameObject gameOverCanvas;
     public GameObject gameWinCanvas;
 
+    public DialogController dialogController;
+
     public bool gameStarted = false;
     
     private void Start()
@@ -19,6 +21,7 @@ public class GameControllerTrung : MonoBehaviour
         // Hide the game win canvas
         gameWinCanvas.SetActive(false);
         gameStarted = true;
+        dialogController.SetCurrentDialogs(dialogController.introDialogs);
     }
     public void WinGame()
     {
