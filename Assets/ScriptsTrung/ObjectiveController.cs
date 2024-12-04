@@ -65,7 +65,8 @@ public class ObjectiveController : MonoBehaviour
                 playerMovement.interctableObject = null;
                 interactText.SetActive(false);
             }
+        } else if (interactableObject.CompareTag("StoneSlab")) {
+            dialogController.SetCurrentDialogs(dialogController.stoneSlabDetected);
         }
-
     }
 }

@@ -8,6 +8,7 @@ TagManager:
   - Weed
   - Gate
   - Rock
+  - StoneSlab
   layers:
   - Default
   - TransparentFX

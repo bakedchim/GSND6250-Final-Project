@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Quest2Give
   m_EditorClassIdentifier: 
   isLeft: 1
-  text: Please clean up the weeds in the crop field. The gate is broken so you will
-    need to jump over the fence
+  text: Next, can you clean up the weeds in the crop field? The gate is broken so
+    you will need to jump over the fence. You know, like you always did when you
+    were young.
   isSelfDialogue: 0
