@@ -5,6 +5,7 @@ using TMPro;
 
 public class DialogController : MonoBehaviour
 {
+    public Dialog[] introDialogs;
     public Dialog[] ponderPreQuest;
     public Dialog[] ponderNPCBeforeFinalQuest;
     public Dialog[] ponderBeforeFinalQuest;
@@ -12,6 +13,9 @@ public class DialogController : MonoBehaviour
     public Dialog[] quest1Give;
     public Dialog[] quest2Give;
     public Dialog[] quest3Give;
+
+    public Dialog[] magicDetected;
+    public Dialog[] stoneSlabDetected;
 
     public GameObject dialogPanel;
 
@@ -66,6 +70,11 @@ public class DialogController : MonoBehaviour
         dialogPanel.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        if (CompareDialogs(currentDialogs, stoneSlabDetected)) {
+            // Change to DaskhCave scene
+            UnityEngine.SceneManagement.SceneManager.LoadScene("DakshCave");
+        }
     }
     
 

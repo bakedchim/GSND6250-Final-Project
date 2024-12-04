@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Quest3Give
   m_EditorClassIdentifier: 
   isLeft: 1
-  text: Please collect the herb from the forest
+  text: Here's the final task for the morning for ya. Go and collect some herbs from
+    the forest for me.
   isSelfDialogue: 0
