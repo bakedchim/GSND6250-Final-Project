@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 55ad0f06557cee6439041315c654b9e4
+=======
+guid: 31b33660e6c1fe44ca023544e25a00ec
+>>>>>>> origin/JuliaTwo
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
